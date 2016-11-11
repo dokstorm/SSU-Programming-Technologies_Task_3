@@ -2,18 +2,15 @@
 #if QT_VERSION < 0x050000
 #include <QtGui>
 #else
-#include <QtWidgets>
 #endif
+#include <QApplication>
 
-using namespace std;
+#include "app.h"
 
 int main(int argc, char *argv[])
 {
-    QApplication app(argc,argv);
-
-    QWidget *widget = new QWidget;
-
-    widget->show();
-
+    QApplication app(argc, argv);
+    Window window;
+    window.show();
     return app.exec();
 }
